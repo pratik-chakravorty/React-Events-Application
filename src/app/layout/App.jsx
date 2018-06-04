@@ -9,6 +9,7 @@ import HomePage from "../../features/home/HomePage";
 import PeopleDashboard from "../../features/user/PeopleDashboard/PeopleDashboard";
 import UserDetailedPage from "../../features/UserDetailed/UserDetailedPage";
 import { Route, Switch } from "react-router-dom";
+import TestComponent from "../../features/testarea/TestComponent";
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
               <Container className="main">
                 <Switch>
                   <Route path="/events" component={EventDashBoard} />
+                  <Route path="/test" component={TestComponent} />
                   <Route path="/event/:id" component={EventDetailedPage} />
                   <Route path="/people" component={PeopleDashboard} />
                   <Route path="/profile/:id" component={UserDetailedPage} />
