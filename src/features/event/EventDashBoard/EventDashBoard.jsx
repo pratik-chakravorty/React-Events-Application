@@ -5,6 +5,7 @@ import EventForm from "../EventForm/EventForm";
 import { connect } from "react-redux";
 import { deleteEvent } from "../eventActions";
 import LoadingComponent from "../../../app/layout/LoadingComponent";
+import EventActivity from "../EventActivity/EventActivity";
 
 const mapState = state => ({
   events: state.events,
@@ -27,7 +28,9 @@ class EventDashBoard extends Component {
         <Grid.Column width={10}>
           <EventList events={events} deleteEvent={this.handleDeleteEvent} />
         </Grid.Column>
-        <Grid.Column width={6} />
+        <Grid.Column width={6}>
+          <EventActivity />
+        </Grid.Column>
       </Grid>
     );
   }
