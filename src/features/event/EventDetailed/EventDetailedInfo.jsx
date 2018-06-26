@@ -7,6 +7,7 @@ class EventDetailedInfo extends Component {
     showMap: false
   };
 
+
   showMapToggle = () => {
     this.setState(prevState => ({
       showMap: !prevState.showMap
